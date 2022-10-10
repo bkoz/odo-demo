@@ -1,4 +1,4 @@
-Using vscode with python on Openshift
+Using vscode and odo to develop python applications on Openshift
 
 Install the version 3 [odo client](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/odo/) into a 
 directory in your `$PATH`. 
@@ -95,12 +95,11 @@ Hello World!
 
 In VSCode, edit the `app.py` file and make a simple code change.
 
-Save the file and `odo` will push any changes to the running pod in Openshift. Another curl
-command may be used to verify the change.
+Save the file and `odo` developer mode will automatically push any changes to the running pod in Openshift. Another curl command may be used to verify the change.
 ```
 curl http://127.0.0.1:40001
 
-Hello World!
+Hello Python World!
 ```
 
 ### Adding a database
