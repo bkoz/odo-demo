@@ -36,7 +36,7 @@ components:
     - name: DEBUG_PORT
       value: "5858"
     - name: POSTGRESQL_SERVICE_HOST
-      value: "postgresql.bktest01"
+      value: "postgresql.odo-demo"
     - name: POSTGRESQL_DATABASE 
       value: postgres
     - name: POSTGRESQL_USER

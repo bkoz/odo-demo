@@ -1,5 +1,6 @@
-Using vscode and odo to develop python applications on Openshift
+# Using vscode and odo to develop python applications on Openshift
 
+## Setup
 Install the version 3 [odo client](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/odo/) into a 
 directory in your `$PATH`. 
 
@@ -10,13 +11,13 @@ Create and change to a new directory. Launch vscode and open the folder that you
 ```
 mkdir demo
 cd demo
+vscode .
 ```
 
-Launch vscode and open 2 terminals. Launch a web browser and login to
+Open 2 terminals in vscode, launch a web browser and login to
 the Openshift web console.
 
-From the web browser, login to an Openshift cluster.
-In the upper right menu under your name, choose `Copy Login Command -> Display Token` then copy the `server` and `token` arguments from the example `oc` command string.
+In the upper right menu under your name in the Openshift web console, choose `Copy Login Command -> Display Token` then copy the `server` and `token` arguments from the example `oc` command string.
 
 Perform the following steps using the `odo` client from a vscode terminal. 
 
