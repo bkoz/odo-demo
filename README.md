@@ -28,12 +28,12 @@ odo login --token=sha256~logintoken --server=https://api.ocp.mysandbox.com:6443
 
 Create a new project.
 ```
-odo create project bktest01
+odo create project odo-demo
 ```
 Example output.
 ```
- ✓  Project "bktest01" is ready for use
- ✓  New project created and now using project: bktest01
+ ✓  Project "odo-demo" is ready for use
+ ✓  New project created and now using project: odo-demo
  ```
 
 Create a new python flask application named `flask-example`.
@@ -49,7 +49,7 @@ Example output.
 ```
   __
  /  \__     Developing using the flask-example Devfile
- \__/  \    Namespace: bktest01
+ \__/  \    Namespace: odo-demo
  /  \__/    odo version: v3.0.0-rc2
  \__/
 
