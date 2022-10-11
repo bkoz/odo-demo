@@ -6,9 +6,6 @@ directory in your `$PATH`.
 Install the latest [oc client](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/latest/) into a 
 directory in your `$PATH`. 
 
-From a web browser, login to an Openshift cluster.
-In the upper right menu under your name, choose `Copy Login Command -> Display Token` then copy the `server` and `token` arguments from the example `oc` command string.
-
 Create and change to a new directory. Launch vscode and open the folder that you created.
 ```
 mkdir demo
@@ -17,6 +14,9 @@ cd demo
 
 Launch vscode and open 2 terminals. Launch a web browser and login to
 the Openshift web console.
+
+From the web browser, login to an Openshift cluster.
+In the upper right menu under your name, choose `Copy Login Command -> Display Token` then copy the `server` and `token` arguments from the example `oc` command string.
 
 Perform the following steps using the `odo` client from a vscode terminal. 
 
