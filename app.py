@@ -1,17 +1,34 @@
+"""
+Description:
+    Example flask test program to demonstrate connectivity to a postgresql database service.
+"""
+#
+# The psycopg library is used for Postgresql access.
+#
 from flask import Flask
 import logging
-import psycopg
 import os
+import psycopg
 
-
+#
+# Setup basic logging.
+#
 logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    logging.info("called hello endpoint")
-
+def hello() -> None:
+    """
+    Define a top-level route and a REST endpoint.
+    Args: None
+    Returns: The IP address of the Postgresql service.
+    """
+    
+    logging.info("Calling the hello function.")
+    #
+    # Grab the environment variables needed for Postgresql authentication.
+    #
     dbname = os.getenv('POSTGRESQL_DATABASE')
     user = os.getenv('POSTGRESQL_USER')
     password = os.getenv('POSTGRESQL_PASSWORD')
@@ -21,6 +38,9 @@ def hello():
     logging.info(f"POSTGRESQL_PASSWORD = {password}")
     logging.info(f"POSTGRESQL_SERVICE_HOST = {host}")
 
+    #
+    # Create the Postgresql auth string.
+    #
     params = {
     'dbname': dbname,
     'user': user,
@@ -29,6 +49,9 @@ def hello():
     'port': 5432
     }
 
+    #
+    # Make the Postgresql database connection.
+    #
     try:
         conn = psycopg.connect(**params)
     except psycopg.OperationalError:
@@ -38,9 +61,14 @@ def hello():
 
     logging.info(f"connection = {conn.info.hostaddr}")
 
-
+    #
+    # Return the IP address of the Postgresql service to the REST client.
+    #
     return f"Connected to postgresql at {conn.info.hostaddr}"
 
+#
+# Run the webserver.
+#
 if __name__ == '__main__':
     app.run(port=8080,host='0.0.0.0')
 
