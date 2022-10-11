@@ -11,7 +11,7 @@ Create and change to a new directory. Launch vscode and open the folder that you
 ```
 mkdir demo
 cd demo
-vscode .
+code .
 ```
 
 Open 2 terminals in vscode, launch a web browser and login to
