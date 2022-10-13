@@ -29,6 +29,8 @@ Login to the Openshift API server.
 odo login --token=sha256~logintoken --server=https://api.ocp.mysandbox.com:6443
 ```
 
+### Creating the Application
+
 Create a new project.
 ```
 odo create project odo-demo
@@ -115,6 +117,7 @@ CLI example
 oc new-app --template=postgresql-ephemeral -p POSTGRESQL_USER=postgres -p POSTGRESQL_PASSWORD=postgres -p POSTGRESQL_DATABASE=postgres --dry-run=False
 ```
 
+### Glueing the Pieces Together
 Replace the contents of `app.py` that was created by the `odo` template with the version in this repo. It contains basic code
 to connect to the postgresql database and return the connection IP address. 
 
