@@ -1,6 +1,8 @@
 # Using vscode and odo to develop python applications on Openshift
 
 ## Setup
+
+### Install the Client Tools
 Install the version 3 [odo client](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/odo/) into a 
 directory in your `$PATH`. 
 
@@ -14,6 +16,7 @@ cd demo
 code .
 ```
 
+### Login to Openshift
 Open 2 terminals in vscode, launch a web browser and login to
 the Openshift web console.
 
