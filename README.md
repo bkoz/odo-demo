@@ -153,11 +153,12 @@ INFO:root:DB Connection Failed!
 INFO:root:Exiting.
 ```
 
-Notice the environment variables needed for authentication are null.
+Notice the environment variables needed for authentication are null. We'll 
+fix this by adding the environment variables to `devfile.yaml`.
 
 Fixed that by the replacing the contents of `devfile.yaml` that was created by the `odo` template with the version in this repo.
 
-After modifying `devfile.yaml` you should notice that a new pod will get built and deployed. Now the `curl` should suceed.
+After modifying `devfile.yaml` you should notice that a new pod will get built and deployed. Now the `curl` should succeed.
 
 ```
 curl 127.0.0.1:40001
@@ -166,6 +167,6 @@ curl 127.0.0.1:40001
 Connected to postgresql at 172.30.224.110
 ```
 
-Congratulations for orchestrating your first Openshift application!
+Congratulations on orchestrating your first Openshift application!
 
 This concludes the demo.
